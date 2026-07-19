@@ -1,5 +1,7 @@
 # BroodOS
 
+[![Support BroodOS on Buy Me a Coffee](https://img.shields.io/badge/Support-Buy%20Me%20a%20Coffee-FFDD00?logo=buymeacoffee&logoColor=000)](https://buymeacoffee.com/rf1705)
+
 BroodOS is an unofficial homebrew port of **StarCraft** and **StarCraft: Brood War** for LG webOS TVs.
 
 This repository contains no Blizzard game assets. A legally obtained copy of the original game data is required. BroodOS currently detects the classic files `StarDat.mpq`, `BrooDat.mpq`, and the optional `Patch_rt.mpq`; support for additional installation formats will be added as development progresses.
@@ -79,3 +81,7 @@ Packaging additionally requires `ares-package` from `@webos-tools/cli`. The resu
 ## License
 
 BroodOS is intended to remain compatible with the GNU General Public License version 2.0 used by StarClone. No Blizzard assets are covered by this license or distributed by this project.
+
+## Support the project
+
+If you would like to support continued BroodOS development, you can [buy RF1705 a coffee](https://buymeacoffee.com/rf1705).
