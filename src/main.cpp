@@ -22,6 +22,15 @@ std::string argument_value(int argc, char* argv[], const std::string& option) {
     return {};
 }
 
+bool has_argument(int argc, char* argv[], const std::string& option) {
+    for (int index = 1; index < argc; ++index) {
+        if (argv[index] == option) {
+            return true;
+        }
+    }
+    return false;
+}
+
 std::string shortened(const std::string& value, std::size_t maximum) {
     if (value.size() <= maximum) {
         return value;
@@ -84,6 +93,16 @@ int main(int argc, char* argv[]) {
 
     std::cout << "BroodOS 0.1.0\n";
     std::cout << "Scanned " << scan.roots.size() << " roots; found " << scan.locations.size() << " game data location(s).\n";
+
+    if (has_argument(argc, argv, "--scan-only")) {
+        for (const std::string& root : scan.roots) {
+            std::cout << "scan root: " << root << '\n';
+        }
+        for (const auto& location : scan.locations) {
+            std::cout << "game data: " << location.directory << '\n';
+        }
+        return scan.locations.empty() ? 2 : 0;
+    }
 
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS | SDL_INIT_GAMECONTROLLER) != 0) {
         std::cerr << "SDL initialization failed: " << SDL_GetError() << '\n';
@@ -148,4 +167,3 @@ int main(int argc, char* argv[]) {
     SDL_Quit();
     return 0;
 }
-

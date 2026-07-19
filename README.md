@@ -63,21 +63,19 @@ Run the desktop diagnostic app with an optional data directory:
 ./build/broodos --data-dir /path/to/your/StarCraft/files
 ```
 
+For a non-graphical storage check, add `--scan-only`. It exits with status 0 when a complete pair of MPQs is found and status 2 otherwise.
+
 ## Building for LG webOS
 
-Native TV builds use the unofficial [webOS Homebrew NDK](https://www.webosbrew.org/develop/guides/env-setup/) and SDL2. After activating the NDK environment:
+Native TV builds use the unofficial [webOS Homebrew NDK](https://www.webosbrew.org/develop/guides/env-setup/) and SDL2. Set `WEBOS_NDK_ROOT` to the extracted and relocated SDK directory, then run:
 
 ```sh
-cmake -S . -B build-webos \
-  -DCMAKE_TOOLCHAIN_FILE="$WEBOS_NDK_TOOLCHAIN_FILE" \
-  -DBROODOS_BUILD_TESTS=OFF
-cmake --build build-webos
-cmake --build build-webos --target package
+export WEBOS_NDK_ROOT=/path/to/arm-webos-linux-gnueabi_sdk-buildroot
+sh scripts/build-webos.sh
 ```
 
-Packaging additionally requires `ares-package` from `@webos-tools/cli`. The result is an IPK that can be installed through webOS Dev Manager or the Homebrew Channel.
+Packaging additionally requires `ares-package` from `@webos-tools/cli`. The result is `build-webos/org.webosbrew.broodos_0.1.0_arm.ipk`, which can be installed through webOS Dev Manager or the Homebrew Channel.
 
 ## License
 
 BroodOS is intended to remain compatible with the GNU General Public License version 2.0 used by StarClone. No Blizzard assets are covered by this license or distributed by this project.
-
