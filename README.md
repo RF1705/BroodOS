@@ -78,6 +78,8 @@ sh scripts/build-webos.sh
 
 Packaging additionally requires `ares-package` from `@webos-tools/cli`. The result is `build-webos/org.webosbrew.broodos_0.1.0_arm.ipk`, which can be installed through webOS Dev Manager or the Homebrew Channel.
 
+The webOS build embeds the GCC and C++ compiler runtimes to remain compatible with the older `libstdc++` versions shipped on TVs. It does not replace or modify system libraries on the TV.
+
 ## License
 
 BroodOS is intended to remain compatible with the GNU General Public License version 2.0 used by StarClone. No Blizzard assets are covered by this license or distributed by this project.

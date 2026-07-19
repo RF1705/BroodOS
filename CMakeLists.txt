@@ -23,6 +23,13 @@ target_include_directories(broodos SYSTEM PRIVATE ${SDL2_INCLUDE_DIRS})
 target_compile_options(broodos PRIVATE ${SDL2_CFLAGS_OTHER} -Wall -Wextra -Wpedantic)
 target_link_libraries(broodos PRIVATE broodos_storage ${SDL2_LDFLAGS})
 
+# LG webOS releases ship an older libstdc++ than the current Homebrew NDK.
+# Embed only the compiler runtimes so the app remains compatible without
+# replacing or modifying any TV system libraries.
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    set_property(TARGET broodos APPEND_STRING PROPERTY LINK_FLAGS " -static-libstdc++ -static-libgcc")
+endif()
+
 install(TARGETS broodos RUNTIME DESTINATION .)
 install(FILES appinfo.json assets/icon.png DESTINATION .)
 
