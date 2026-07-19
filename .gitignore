@@ -1,0 +1,10 @@
+build/
+dist/
+*.ipk
+.DS_Store
+
+# Original copyrighted game data must never be committed.
+*.mpq
+*.MPQ
+starinstall.exe
+broodinstall.exe

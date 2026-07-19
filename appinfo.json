@@ -1,0 +1,11 @@
+{
+  "id": "org.webosbrew.broodos",
+  "type": "native",
+  "main": "broodos",
+  "icon": "icon.png",
+  "title": "BroodOS",
+  "vendor": "BroodOS contributors",
+  "version": "0.1.0",
+  "disableBackHistoryAPI": true
+}
+
