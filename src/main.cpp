@@ -63,7 +63,8 @@ void render(SDL_Renderer* renderer, const broodos::ScanResult& scan) {
         broodos::draw_text(renderer, 980, 254, location.patch_rt.empty() ? "PATCH OPTIONAL" : "PATCH FOUND", 2,
                            location.patch_rt.empty() ? SDL_Color{157, 170, 187, 255} : SDL_Color{92, 224, 151, 255});
     } else {
-        broodos::draw_text(renderer, 76, 254, "COPY STARDAT.MPQ AND BROODAT.MPQ TO USB/BROODOS", 2, {205, 216, 226, 255});
+        broodos::draw_text(renderer, 76, 247, "COPY STARDAT.MPQ AND BROODAT.MPQ TO USB/BROODOS", 2, {205, 216, 226, 255});
+        broodos::draw_text(renderer, 76, 276, "NO GAME YET? STARCRAFT IS FREE FROM BLIZZARD - SEE README", 2, {125, 222, 255, 255});
     }
 
     fill_rect(renderer, {48, 338, 1184, 256}, {12, 23, 35, 255});
