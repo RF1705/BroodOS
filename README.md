@@ -1,6 +1,7 @@
 # BroodOS
 
 [![Support BroodOS on Buy Me a Coffee](https://img.shields.io/badge/Support-Buy%20Me%20a%20Coffee-FFDD00?logo=buymeacoffee&logoColor=000)](https://buymeacoffee.com/rf1705)
+[![Download StarCraft free from Battle.net](https://img.shields.io/badge/StarCraft-Play%20for%20Free-148EFF?logo=battledotnet&logoColor=white)](https://eu.shop.battle.net/de-de/product/starcraft-remastered?p=32167&pfm=starcraft-remastered-family-page-games&returnFamilyUrl=https%3A%2F%2Feu.shop.battle.net%2Ffamily%2Fstarcraft-remastered%3Fpfm%3Dfrom-checkout#optLogin=true)
 
 BroodOS is an unofficial homebrew port of **StarCraft** and **StarCraft: Brood War** for LG webOS TVs.
 
@@ -23,6 +24,8 @@ The StarCraft engine is not integrated yet. The next milestone is to evaluate an
 ## Original game data
 
 Never commit, upload, or redistribute the original MPQ files.
+
+> **Need StarCraft?** Blizzard currently offers the classic **StarCraft** version as **Play for Free** through the official Battle.net store. [Download StarCraft from Battle.net](https://eu.shop.battle.net/de-de/product/starcraft-remastered?p=32167&pfm=starcraft-remastered-family-page-games&returnFamilyUrl=https%3A%2F%2Feu.shop.battle.net%2Ffamily%2Fstarcraft-remastered%3Fpfm%3Dfrom-checkout#optLogin=true). BroodOS only reads your locally supplied original game data; it does not download or redistribute Blizzard assets.
 
 For a USB drive, use this recommended layout:
 
